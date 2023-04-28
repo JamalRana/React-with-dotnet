@@ -1,17 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+const subHeaderStyle = { color: "grey", backgroundColor: "darkgray" }
+
+function MainHeader() {
+  return (<h1 className='card-header'>
+    React Course
+  </h1>);
+}
+function SubHeader() {
+  return (<p className='card-body'>This will be an exciting course.</p>);
+}
+function Header() {
+  return (
+    <div className='card'>
+      <MainHeader />
+      <SubHeader />
+    </div>
+
+  );
+}
+
+
+function Footer() { return (<p className='btn btn-primary'>Happy Coding....</p>); }
+
+function MainBody() {
+
+  return (
+    <div className='card-text'>
+      <p >In this course, i will learn everything related to react</p>
+      <ul>
+        <li>Pray Call</li>
+        <li>Go To Masjid</li>
+      </ul>
+    </div>
+  );
+}
+
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <Header />
+    <MainBody />
+    <Footer />
+  </>
+
+
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
